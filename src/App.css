@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.psudo{
+  font-weight: 600;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.psudo a:hover{
+  color: #1E2F97;
+}
+.psudo:hover{
+  background: #E0E0E0;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+.psudo:active{
+  transform: scale(0.97);
+}
+.logo-text{
+  font-family: 'Rubik Wet Paint', cursive;
+  background: #1E2F97;
+  background-clip: text;
+  color: transparent;
+}
+.container{
+  height: 100vh;
+  width: 100%;
+  background: url(./clean2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.header img{
+  width: 60px;
+}
+.nav-links{
+  display: flex;
+  list-style-type: none;
+}
+.nav-links li a{
+  text-decoration: none;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.nav-links .call a{
+  color: #E0E0E0;
+}
+.content{
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.content h1{
+  font-size: 2.6rem;
+  color: #E0E0E0;
+}
+.content p{
+  color: #eef3f5;
+  text-align: center;
+}
+.inside{
+  margin-top: 2em;
+  display: flex;
+}
+.quote a{
+  display: block;
+  text-decoration: none;
+  color: #E0E0E0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.quote{
+  border: 2px solid #E0E0E0;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.inside p{
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote a:hover {
+  color: #1E2F97;
+  background: #E0E0E0;
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote a:active,
+.contact a:active{
+  transform: scale(0.98);
+}
+.contact{
+  margin-left: 10px;
+  background: #1E2F97;
+  border-radius: 50px;
+  border: 2px solid #1E2F97;
+}
+.contact a{
+  text-decoration: none;
+  color: #E0E0E0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.mobile{
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ----------@MEDIA--------- */
+
+@media (max-width: 600px){
+  
+  .nav-links li a{
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
+  .nav-links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    position: fixed;
+    margin-right: 0;
+    top: 0;
+    right: -250px;
+    width: 200px;
+    height: 100vh;
+    background: #2a3239;
+    padding-top: 60px;
+    transition: 0.5s ease-in-out;
+  }
+  .nav-links.active{
+    right: 0;
+  }
+  .nav-links li{
+    padding: 15px;
+  }
+  .psudo a:hover{
+    color: #ff004f;
+  }
+  .content h1{
+    font-size: 2rem;
+    text-align: center;
+    color: #E0E0E0;
+  }
+  .content p{
+    color: #eef3f5;
+    text-align: center;
+  }
+  .quote{
+    border: 2px solid #1E2F97;
+    background: #1E2F97;
+  }
+  .contact{
+    border: 2px solid #E0E0E0;
+    background: transparent;
+  }
+  .contact a:hover {
+    color: #1E2F97;
+    background: #E0E0E0;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .call{
+  all: unset;
+  }
+  .mobile{
+    display: block;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
 }
